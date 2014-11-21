@@ -2,177 +2,175 @@
 
 html
   font-family: $main-font-family
+  font-size: $main-font-size
   background-color: $main-background
   color: $main-color
-  padding: 0
+  word-wrap: break-word
   margin: 0
-  // padding-left: 5%
-  // padding-right: 5%
+  padding: 0
 
 body
-  margin: 0 auto
-  width: 100%
   padding: 0
-  // max-width: 960px
-  font-size: 14px
-  line-height: 1.75em
+  width: 100%
+  margin: 0
+
+  // &.normal
+
+  // &.console
+
+  // &[type=channel]
+
+  // &[type=talk]
+
+  // &[type=console]
+
+// hr
+
+// .inlineimage
+
+.line
+  position: relative
+  margin: 0
+  padding: 0
+  width: 100%
+
+  // &[type=join]
+
+  // &[type=quit],
+  // &[type=part]
+
+  // &[type=kick]
+
+  // &[alternate=even]
+  // &[alternate=odd]
+
+  // &[type=action] .sender:before
+
+  // &[highlight=true]
 
 .url
+  word-break: break-all
   color: $url-color
   text-decoration: none
   border-bottom: 1px solid $url-border
 
+strong.highlight,
 .highlight
+  font-weight: bold
   color: $highlight-color
   padding: 3px 5px
   background: $highlight-background
   margin: 0 3px 0 0
-  font-weight: 500
   border: 1px solid $highlight-border
   border-radius: 4px
 
-.line
-  width: 100%
-  // float: right
-  // margin: 1em 50px 0 0
-  color: #333
-  // background-color: red
-  // border-top: 1px solid #e1e1e1
-  // box-shadow: 0 1px 0 white inset
-  // padding: 0px 0px 0px 120px
-  // position: relative
-  display: block
-  margin: 0
-  padding: 0
+  &:before
+    content: "@"
+    color: $highlight-color
+    font-weight: bold
 
-  // &:hover
-
-  //   .time
-  //     display: block
+.place
+  display: none
 
 .time
   color: $time-color
-  display: block
-  float: right
-  // position: absolute
-  // right: -75px
-  // width: 50px
-
-.place
-  color: $place-color
-  display: block
+  font-size: 8pt
+  position: absolute
+  right: 15px
+  top: 30%
+  z-index: 1000
 
 .sender
+  padding: 5px 10px 5px 0
+  margin: 0
   display: inline-block
-  width: 130px
-  // margin-left: -30%
   text-align: right
-  // margin-right: 3%
   font-weight: bold
-  // position: absolute
-  padding: 5px
-  // left: 5px
-  // background-color: green !important
+  box-shadow: 0 1px 0 $white inset
+  width: 15%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
 
-.sender[type=normal]
-  color: $sender-normal-color
-  background: $sender-normal-background
+  &[type=normal]
+    color: $sender-normal-color
+    background-color: $sender-normal-background
+    border-top: 1px solid $sender-normal-border
 
-.sender[type=myself]
-  color: $sender-myself-color
-  background: $sender-myself-background
-  border: 1px solid #bed6eb
+    + .message
+      background-color: $sender-normal-message-background
+      border-top: 1px solid $sender-normal-border
+      border-left: 1px solid $sender-normal-border
+
+  &[type=myself]
+    color: $sender-myself-color
+    background-color: $sender-myself-background
+    border-top: 1px solid $sender-myself-border
+
+    + .message
+      background-color: $sender-myself-message-background
+      border-top: 1px solid $sender-myself-border
+      border-left: 1px solid $sender-myself-border
 
 .message
-  border-left: 1px solid #e1e1e1
-  border-bottom: 1px solid #e1e1e1
-  padding: 5px 50px 5px 10px
-  // background-color: blue
+  margin: 0
+  padding: 5px 40px 5px 10px
+  display: inline-block
   box-shadow: -1px 0 0 $white
-  display: inline-block
-  // width: 80%
-
-.message[type=notice]
-  color: $message-notice-color
-
-.message[type=action]
-  color: $message-action-color
-  margin-left: 2%
-
-div[type=action]
-  font-size: .9em
-
-div[type=action] .sender
-  padding-left: 3%
-  border-left: 4px solid $action-sender-border
-  color: $action-sender-color
-  display: inline-block
-  width: auto
-  text-align: left
-  margin-left: 0
-
-.message[type=system],
-.message[type=join],
-.message[type=part],
-.message[type=kick],
-.message[type=quit],
-.message[type=kill],
-.message[type=nick],
-.message[type=mode],
-.message[type=invite],
-.message[type=wallops]
-  padding-left: 3%
-  border-left: 4px solid $message-border
   color: $message-color
-  display: inline-block
-  width: auto
-  text-align: left
-  margin-left: 0
+  width: 84.9%
+  position: relative
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
 
-.inlineimage
-  margin: 2em 0 1em 0
-  height: auto
-  max-width: 100%
-  max-height: none
-  -webkit-box-shadow: none
-  box-shadow: none
-  border: none
-  -webkit-transition: all linear 0.2s
+  /* error */
+  &[type=error],
+  &[type=error_reply],
+  &[type=kick]
+    width: 100%
+    color: $message-color
+    background-color: $message-error-background
+    border-top: 1px solid $message-error-border
 
-.inlineimage:hover
-  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
-  -webkit-transition: all linear 0.15s
+  /* success */
+  &[type=join]
+    width: 100%
+    color: $message-color
+    background-color: $message-success-background
+    border-top: 1px solid $message-success-border
 
-div[type=topic]
-  margin-top: 1em
+  /* notice */
+  &[type=mode],
+  &[type=topic],
+  &[type=invite],
+  &[type=wallops],
+  &[type=quit],
+  &[type=part]
+    width: 100%
+    color: $message-color
+    background-color: $message-notice-background
+    border-top: 1px solid $message-notice-border
 
-.message[type=topic],
-.message[type=reply]
-  padding-left: 3%
-  color: $message-topic-reply-color
-  border-left: 4px solid $message-topic-reply-border
-  display: inline-block
-  width: auto
-  text-align: left
-  margin-left: 0
+  /* warning */
+  &[type=notice],
+  // &[type=privmsg]
+    width: 100%
+    color: $message-color
+    background-color: $message-warning-background
+    border-top: 1px solid $message-warning-border
 
-.message[type=error],
-.message[type=error_reply]
-  color: $message-error-color
-
-.message[type=dcc_send_send]
-  color: $message-dcc-send-send-color
-
-.message[type=dcc_send_receive]
-  color: $message-dcc-send-receive-color
-
-.message[type=debug_send]
-  color: $message-debug-send-color
-
-.message[type=debug_receive]
-  color: $message-debug-receive-color
-
-@media screen and (max-width:720px)
-  body
-    font-size: 12px
+  /* misc */
+  &[type=system],
+  &[type=reply],
+  &[type=dcc_send_send],
+  &[type=dcc_send_receive],
+  &[type=action],
+  &[type=kill],
+  &[type=nick],
+  &[type=debug_send],
+  &[type=debug_receive]
+    width: 100%
+    color: $message-color
+    background-color: $message-misc-background
+    border-top: 1px solid $message-misc-border
