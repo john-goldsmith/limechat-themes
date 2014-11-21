@@ -3,25 +3,43 @@
 log-view:
   nickname-format: '%n: '
   # scroller-highlight-color: '#ff0000'
+
 input-text:
   # font-family: 'Menlo'
   # font-size: 13.0
   background-color: '#ffffff'
   # color: '#93a1a1'
+
 member-list:
   # font-family: 'Menlo'
   # font-size: 13.0
-  color: '#b1b3b6'
-  background-color: '#313949'
+
+  # Uncomment the following for a 2-column layout
+  # color: '#b1b3b6'
+  # background-color: '#313949'
+  # operator:
+  #   color: '#b1b3b6'
+  # selected:
+  #   color: '#fff'
+  #   background:
+  #     top-line-color: '#1a1f28'
+  #     bottom-line-color: '#414857'
+  #     top-color: '#242b38'
+  #     bottom-color: '#242b38'
+
+  # 3-column layout
+  color: '#333333'
+  background-color: '#ffffff'
   operator:
-    color: '#b1b3b6'
+    color: '#333333'
   selected:
-    color: '#fff'
+    color: '#333333'
     background:
-      top-line-color: '#1a1f28'
-      bottom-line-color: '#414857'
-      top-color: '#242b38'
-      bottom-color: '#242b38'
+      top-line-color: '#f0f0f0'
+      bottom-line-color: '#f0f0f0'
+      top-color: '#f0f0f0'
+      bottom-color: '#f0f0f0'
+
 server-tree:
   # font-family: 'Menlo'
   # font-size: 13.0
