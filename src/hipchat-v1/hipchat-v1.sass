@@ -1,0 +1,178 @@
+@import "vars"
+
+html
+  font-family: $main-font-family
+  background-color: $main-background
+  color: $main-color
+  padding: 0
+  margin: 0
+  // padding-left: 5%
+  // padding-right: 5%
+
+body
+  margin: 0 auto
+  width: 100%
+  padding: 0
+  // max-width: 960px
+  font-size: 14px
+  line-height: 1.75em
+
+.url
+  color: $url-color
+  text-decoration: none
+  border-bottom: 1px solid $url-border
+
+.highlight
+  color: $highlight-color
+  padding: 3px 5px
+  background: $highlight-background
+  margin: 0 3px 0 0
+  font-weight: 500
+  border: 1px solid $highlight-border
+  border-radius: 4px
+
+.line
+  width: 100%
+  // float: right
+  // margin: 1em 50px 0 0
+  color: #333
+  // background-color: red
+  // border-top: 1px solid #e1e1e1
+  // box-shadow: 0 1px 0 white inset
+  // padding: 0px 0px 0px 120px
+  // position: relative
+  display: block
+  margin: 0
+  padding: 0
+
+  // &:hover
+
+  //   .time
+  //     display: block
+
+.time
+  color: $time-color
+  display: block
+  float: right
+  // position: absolute
+  // right: -75px
+  // width: 50px
+
+.place
+  color: $place-color
+  display: block
+
+.sender
+  display: inline-block
+  width: 130px
+  // margin-left: -30%
+  text-align: right
+  // margin-right: 3%
+  font-weight: bold
+  // position: absolute
+  padding: 5px
+  // left: 5px
+  // background-color: green !important
+
+.sender[type=normal]
+  color: $sender-normal-color
+  background: $sender-normal-background
+
+.sender[type=myself]
+  color: $sender-myself-color
+  background: $sender-myself-background
+  border: 1px solid #bed6eb
+
+.message
+  border-left: 1px solid #e1e1e1
+  border-bottom: 1px solid #e1e1e1
+  padding: 5px 50px 5px 10px
+  // background-color: blue
+  box-shadow: -1px 0 0 $white
+  display: inline-block
+  // width: 80%
+
+.message[type=notice]
+  color: $message-notice-color
+
+.message[type=action]
+  color: $message-action-color
+  margin-left: 2%
+
+div[type=action]
+  font-size: .9em
+
+div[type=action] .sender
+  padding-left: 3%
+  border-left: 4px solid $action-sender-border
+  color: $action-sender-color
+  display: inline-block
+  width: auto
+  text-align: left
+  margin-left: 0
+
+.message[type=system],
+.message[type=join],
+.message[type=part],
+.message[type=kick],
+.message[type=quit],
+.message[type=kill],
+.message[type=nick],
+.message[type=mode],
+.message[type=invite],
+.message[type=wallops]
+  padding-left: 3%
+  border-left: 4px solid $message-border
+  color: $message-color
+  display: inline-block
+  width: auto
+  text-align: left
+  margin-left: 0
+
+.inlineimage
+  margin: 2em 0 1em 0
+  height: auto
+  max-width: 100%
+  max-height: none
+  -webkit-box-shadow: none
+  box-shadow: none
+  border: none
+  -webkit-transition: all linear 0.2s
+
+.inlineimage:hover
+  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+  -webkit-transition: all linear 0.15s
+
+div[type=topic]
+  margin-top: 1em
+
+.message[type=topic],
+.message[type=reply]
+  padding-left: 3%
+  color: $message-topic-reply-color
+  border-left: 4px solid $message-topic-reply-border
+  display: inline-block
+  width: auto
+  text-align: left
+  margin-left: 0
+
+.message[type=error],
+.message[type=error_reply]
+  color: $message-error-color
+
+.message[type=dcc_send_send]
+  color: $message-dcc-send-send-color
+
+.message[type=dcc_send_receive]
+  color: $message-dcc-send-receive-color
+
+.message[type=debug_send]
+  color: $message-debug-send-color
+
+.message[type=debug_receive]
+  color: $message-debug-receive-color
+
+@media screen and (max-width:720px)
+  body
+    font-size: 12px

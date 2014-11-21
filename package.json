@@ -1,0 +1,32 @@
+{
+  "name": "limechat-themes",
+  "version": "1.0.0",
+  "description": "LimeChat themes",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/john-goldsmith/limechat-themes.git"
+  },
+  "keywords": [
+    "limechat"
+  ],
+  "author": "John Goldsmith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-goldsmith/limechat-themes/issues"
+  },
+  "homepage": "https://github.com/john-goldsmith/limechat-themes",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "del": "^0.1.3",
+    "gulp": "^3.8.10",
+    "gulp-flatten": "0.0.4",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-watch": "^2.0.0",
+    "streamqueue": "^0.1.1"
+  }
+}
