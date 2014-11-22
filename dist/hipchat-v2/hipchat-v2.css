@@ -1,0 +1,118 @@
+/* global */
+/* line */
+/* urls */
+/* mentions */
+/* time */
+/* place */
+/* sender */
+/* messages */
+/* misc */
+html {
+  font-family: "SourceCodePro-Regular", "Menlo", "Lucida Grande", "Seoge UI", "Arial", sans-serif;
+  font-size: 14px;
+  background-color: #fffeff;
+  color: #333;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 0;
+  width: 100%;
+  margin: 0; }
+
+.line {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: #f4f4f7; }
+
+.url {
+  word-break: break-all;
+  color: #2c6cba;
+  text-decoration: none;
+  border-bottom: 1px solid #2c6cba; }
+
+strong.highlight,
+.highlight {
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 5px;
+  background: #2c6cba;
+  margin: 0 3px 0 0;
+  border-radius: 4px; }
+  strong.highlight:before,
+  .highlight:before {
+    content: "@";
+    color: #fff;
+    font-weight: bold; }
+
+.place {
+  display: none; }
+
+.time {
+  color: #a09e99;
+  font-size: 8pt;
+  position: absolute;
+  right: 15px;
+  top: 30%;
+  z-index: 1000; }
+
+.sender {
+  padding: 5px 10px 5px 0;
+  margin: 0;
+  display: inline-block;
+  text-align: right;
+  width: 15%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #f4f4f7; }
+  .sender[type=normal] {
+    color: #707271;
+    background-color: #fffeff; }
+    .sender[type=normal] + .message {
+      background-color: #fffeff; }
+  .sender[type=myself] {
+    color: #707271;
+    background-color: #dfe8f4; }
+    .sender[type=myself] + .message {
+      background-color: #dfe8f4; }
+
+.message {
+  margin: 0;
+  padding: 5px 40px 5px 10px;
+  display: inline-block;
+  color: #38393b;
+  width: 84.9%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #f4f4f7;
+  /* error */
+  /* success */
+  /* notice */
+  /* warning */
+  /* misc */ }
+  .message[type=error], .message[type=error_reply], .message[type=kick] {
+    width: 100%;
+    color: #38393b;
+    background-color: #ffe8e8;
+    border-top: 1px solid #ecbdbd; }
+  .message[type=join] {
+    width: 100%;
+    color: #38393b;
+    background-color: #dff3cd;
+    border-top: 1px solid #bde18c; }
+  .message[type=mode], .message[type=topic], .message[type=invite], .message[type=wallops], .message[type=quit], .message[type=part] {
+    width: 100%;
+    color: #38393b;
+    background-color: #e7f0f8;
+    border-top: 1px solid #8cbce1; }
+  .message[type=system], .message[type=reply], .message[type=dcc_send_send], .message[type=dcc_send_receive], .message[type=action], .message[type=kill], .message[type=nick], .message[type=debug_send], .message[type=debug_receive] {
+    width: 100%;
+    color: #38393b;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e1e1e1; }

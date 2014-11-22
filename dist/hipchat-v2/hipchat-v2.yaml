@@ -17,17 +17,17 @@ member-list:
   #########################
   # Begin 2 column layout #
   #########################
-  # color: '#b1b3b6'
-  # background-color: '#313949'
+  # color: '#382f32'
+  # background-color: '#f4f3f4'
   # operator:
-  #   color: '#b1b3b6'
+  #   color: '#382f32'
   # selected:
-  #   color: '#fff'
+  #   color: '#fcfeff'
   #   background:
-  #     top-line-color: '#1a1f28'
-  #     bottom-line-color: '#414857'
-  #     top-color: '#242b38'
-  #     bottom-color: '#242b38'
+  #     top-line-color: '#2c6cba'
+  #     bottom-line-color: '#2c6cba'
+  #     top-color: '#2c6cba'
+  #     bottom-color: '#2c6cba'
   #######################
   # End 3 column layout #
   #######################
@@ -35,17 +35,17 @@ member-list:
   #########################
   # Begin 3 column layout #
   #########################
-  color: '#333333'
-  background-color: '#ffffff'
+  color: '#382f32'
+  background-color: '#fffeff'
   operator:
-    color: '#333333'
+    color: '#382f32'
   selected:
-    color: '#333333'
+    color: '#fcfeff'
     background:
-      top-line-color: '#f0f0f0'
-      bottom-line-color: '#f0f0f0'
-      top-color: '#f0f0f0'
-      bottom-color: '#f0f0f0'
+      top-line-color: '#2c6cba'
+      bottom-line-color: '#2c6cba'
+      top-color: '#2c6cba'
+      bottom-color: '#2c6cba'
   #######################
   # End 3 column layout #
   #######################
@@ -53,7 +53,7 @@ member-list:
 server-tree:
   # font-family: 'Menlo'
   # font-size: 13.0
-  background-color: '#313949'
+  background-color: '#f4f3f4'
   highlight:
     color: '#fff777'
   newtalk:
@@ -62,16 +62,16 @@ server-tree:
     color: '#ff7777'
   normal:
     active: # joined
-      color: '#b1b3b6'
+      color: '#382f32'
     inactive: # left
-      color: '#474f5e'
+      color: '#c5c5c5'
   selected:
     active:
-      color: '#ffffff'
+      color: '#fcfeff'
     inactive:
-      color: '#ffffff'
+      color: '#fcfeff'
     background:
-      top-line-color: '#1a1f28'
-      bottom-line-color: '#414857'
-      top-color: '#242b38'
-      bottom-color: '#242b38'
+      top-line-color: '#2c6cba'
+      bottom-line-color: '#2c6cba'
+      top-color: '#2c6cba'
+      bottom-color: '#2c6cba'

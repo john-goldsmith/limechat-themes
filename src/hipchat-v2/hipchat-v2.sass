@@ -1,4 +1,4 @@
-@import "hipchat-v1-vars"
+@import "hipchat-v2-vars"
 
 html
   font-family: $main-font-family
@@ -33,6 +33,7 @@ body
   margin: 0
   padding: 0
   width: 100%
+  border-top: $line-border
 
   // &[type=join]
 
@@ -61,7 +62,6 @@ strong.highlight,
   padding: 3px 5px
   background: $highlight-background
   margin: 0 3px 0 0
-  border: 1px solid $highlight-border
   border-radius: 4px
 
   &:before
@@ -85,44 +85,46 @@ strong.highlight,
   margin: 0
   display: inline-block
   text-align: right
-  font-weight: bold
-  box-shadow: 0 1px 0 $white inset
+  // font-weight: bold
+  // box-shadow: 0 1px 0 $white inset
   width: 15%
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
+  border-top: 1px solid #f4f4f7
 
   &[type=normal]
     color: $sender-normal-color
     background-color: $sender-normal-background
-    border-top: 1px solid $sender-normal-border
+    // border-top: 1px solid $sender-normal-border
 
     + .message
       background-color: $sender-normal-message-background
-      border-top: 1px solid $sender-normal-border
-      border-left: 1px solid $sender-normal-border
+      // border-top: 1px solid $sender-normal-border
+      // border-left: 1px solid $sender-normal-border
 
   &[type=myself]
     color: $sender-myself-color
     background-color: $sender-myself-background
-    border-top: 1px solid $sender-myself-border
+    // border-top: 1px solid $sender-myself-border
 
     + .message
       background-color: $sender-myself-message-background
-      border-top: 1px solid $sender-myself-border
-      border-left: 1px solid $sender-myself-border
+      // border-top: 1px solid $sender-myself-border
+      // border-left: 1px solid $sender-myself-border
 
 .message
   margin: 0
   padding: 5px 40px 5px 10px
   display: inline-block
-  box-shadow: -1px 0 0 $white
+  // box-shadow: -1px 0 0 $white
   color: $message-color
   width: 84.9%
   position: relative
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
+  border-top: 1px solid #f4f4f7
 
   /* error */
   &[type=error],
